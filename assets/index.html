@@ -4,51 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Weather Dash !</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav>
-      <h1>Weather Dashboard</h1>
+    <nav class="bg-blue-500">
+      <div class="container mx-auto px-4 py-2">
+        <div class="flex items-center justify-between">
+          <h1 class="text-white font-bold text-xl">Weather Dashboard</h1>
+        </div>
+      </div>
     </nav>
-    <div>
-      <form>
-        <h3>Search</h3>
-        <input type="text" />
-        <button id="cityButton">search now</button>
-      </form>
-      <div>
-        <ul>
-          <!--cities-->
-        </ul>
-        <ul>
-          <!--cities-->
-        </ul>
-        <ul>
-          <!--cities-->
-        </ul>
+    <div class="container mx-auto py-4">
+      <aside class="bg-gray-200 p-4">
+        <form>
+          <input
+            type="text"
+            placeholder="Search for City"
+            class="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          >
+            Search
+          </button>
+        </form>
+      </aside>
+      <div class="bg-gray-200 p-4 mt-4">
+        <h2 class="text-lg font-semibold">History</h2>
+        <p class="mt-2"></p>
       </div>
     </div>
     <main>
-      <div>
-        <h3>Current</h3>
-        <ul>
-          Temperature
-        </ul>
-        <ul>
-          Wind
-        </ul>
-        <ul>
-          Humidity
-        </ul>
+      <div class="container mx-auto py-4">
+        <h1 class="text-2xl font-bold mb-4">Current Weather</h1>
+        <div class="bg-white p-4 shadow-md">
+          <h2 class="text-xl font-semibold">Today</h2>
+          <div class="flex items-center justify-center">
+            <p class="text-3xl font-bold ml-4">25°C</p>
+          </div>
+          <p class="text-gray-600 mt-2">Sunny with clear skies</p>
+        </div>
       </div>
-      <div>
-        <h1>Weekly Forecast:</h1>
-        <div id="day1" class="forecastBox"></div>
-        <div id="day2" class="forecastBox"></div>
-        <div id="day3" class="forecastBox"></div>
-        <div id="day4" class="forecastBox"></div>
-        <div id="day5" class="forecastBox"></div>
+
+      <div class="container mx-auto py-4">
+        <h1 class="text-2xl font-bold mb-4">5-Day Forecast</h1>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="bg-white p-4 shadow-md">
+            <h2 class="text-lg font-semibold">Day 1</h2>
+            <p class="text-gray-600">Temperature: 20°C</p>
+            <p class="text-gray-600">Weather: Sunny</p>
+          </div>
+          <div class="bg-white p-4 shadow-md">
+            <h2 class="text-lg font-semibold">Day 2</h2>
+            <p class="text-gray-600">Temperature: 18°C</p>
+            <p class="text-gray-600">Weather: Cloudy</p>
+          </div>
+          <div class="bg-white p-4 shadow-md">
+            <h2 class="text-lg font-semibold">Day 3</h2>
+            <p class="text-gray-600">Temperature: 22°C</p>
+            <p class="text-gray-600">Weather: Rainy</p>
+          </div>
+          <div class="bg-white p-4 shadow-md">
+            <h2 class="text-lg font-semibold">Day 4</h2>
+            <p class="text-gray-600">Temperature: 19°C</p>
+            <p class="text-gray-600">Weather: Cloudy</p>
+          </div>
+          <div class="bg-white p-4 shadow-md">
+            <h2 class="text-lg font-semibold">Day 5</h2>
+            <p class="text-gray-600">Temperature: 21°C</p>
+            <p class="text-gray-600">Weather: Sunny</p>
+          </div>
+        </div>
       </div>
     </main>
 
