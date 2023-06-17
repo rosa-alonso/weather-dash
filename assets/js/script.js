@@ -10,35 +10,17 @@ savedCities.forEach((savedCity) => {
 });
 
 searchInputBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const searchInput = document.getElementById("searchInput").value;
+  e.preventDefault(); //this prevents form submission
+  const searchInput = document.getElementById("searchInput").value; //gets input value
   createButton(searchInput);
   savedCities.push(searchInput);
-  localStorafe.setItem("savedCities", JSON.stringify(savedCities));
+  localStorage.setItem("savedCities", JSON.stringify(savedCities)); //saves value to localStorage
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  const savedCities = localStorage.getItem("savedCities");
-  if (savedCities) {
-    const savedData = document.getElementById("savedData");
-    savedData.textContent = savedCities;
-  }
-});
-
-const searchForm = document.getElementById("searchForm");
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent form submission
-
-  const searchInput = document.getElementById("searchInput");
-  const searchData = searchInput.value; // Get the input value
-
-  // Save the input value to local storage
-  localStorage.setItem("searchData", searchData);
-
-  // Update the displayed data
-  const localStorageData = document.getElementById("localStorageData");
-  localStorageData.textContent = searchData;
-
-  // Reset the form
-  searchInput.value = "";
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   const savedCities = localStorage.getItem("savedCities");
+//   if (savedCities) {
+//     const savedData = document.getElementById("savedData");
+//     savedData.textContent = savedCities;
+//   }
+// });
