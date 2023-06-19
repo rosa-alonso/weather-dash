@@ -14,6 +14,8 @@ This weather API was created to display weather based on the city that is inputt
 
 ### **Github Page**
 
-### Github Profile
+https://rosa-alonso.github.io/weather-dash/
 
-https://github.com/rosa-alonso/note-taker/
+### **Github Profile**
+
+https://github.com/rosa-alonso/weather-dash/
